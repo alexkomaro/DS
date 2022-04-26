@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ВКР Комаров АС</title>
+    <title>ВКР (Комаров А.С.)</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
@@ -15,7 +15,7 @@
         <h1 align="center">Неройсеть для прогнозирования <br> соотношения матрица - наполнитель</h1>
       
 		<h3 align="center">Введите исходные данные:</h3>	  
-	    <p align="left">Десятичные записи дробных чисел указываются через "точку"</p>
+	    <p align="center">Десятичные записи дробных чисел указываются через "."</p>
         <p> <input style='' type="text" placeholder="Плотность" name="Плотность, кг/м3">
         <input type="text" placeholder="Модуль упругости" name="Модуль упругости, ГПа">
         <input type="text" placeholder="Количество отвердителя" name="Количество отвердителя, м.%"></p>
@@ -30,13 +30,13 @@
         <input type="text" placeholder="Плотность нашивки" name="Плотность нашивки"></p>
         <p><button type="submit" href="/">Рассчитать</button></p>
 		
-		  <h2>Результат прогноза: {{result}}</h2>
+		  <h2>Результат прогноза: <u>{{result}}</u></h2>
 		  <table border="1">
-		  <caption>Таблица </caption>
+		  <caption>Справочные значения</caption>
    <tr>
     <th>Переменные</th>
-    <th>Значение min</th>
-    <th>Значение max</th>
+    <th>&nbsp Значение MIN &nbsp</th>
+    <th>&nbsp Значение MAX &nbsp</th>
    </tr>
    <tr><td align="left">Плотность, кг/м3</td><td>1731.77</td><td>2207.77</td></tr>
    <tr><td align="left">Модуль упругости, ГПа</td><td>2.44</td><td>1911.53</td></tr>
@@ -44,7 +44,7 @@
    <tr><td align="left">Содержание эпоксидных групп,%_2</td><td>14.26</td><td>33</td></tr>
    <tr><td align="left">Температура вспышки, С_2</td><td>100</td><td>413.27</td></tr>
    <tr><td align="left">Поверхностная плотность, г/м2</td><td>0.61</td><td>1399.54</td></tr>
-   <tr><td align="left">Модуль упругости при растяжении, ГПа</td><td>64.1</td><td>82.68</td></tr>
+   <tr><td align="left">Модуль упругости при растяжении, ГПа &nbsp</td><td>64.1</td><td>82.68</td></tr>
    <tr><td align="left">Прочность при растяжении, МПа</td><td>1036.86</td><td>3848.43</td></tr>
    <tr><td align="left">Потребление смолы, г/м2</td><td>33.81	</td><td>414.59</td></tr>
    <tr><td align="left">Угол нашивки, град (либо 0 либо 90)</td><td>0</td><td>90</td></tr>
@@ -52,7 +52,7 @@
    <tr><td align="left">Плотность нашивки</td><td>0</td><td>103.98</td></tr>
 		  
         {% if error %}
-        <h2><font color="red">Ошибка ввода переменной, введите число</h2>
+        <h2><font color="red">Ошибка ввода, введите число</h2>
         {% endif %}
 	
       </div>

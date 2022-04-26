@@ -3,7 +3,7 @@ body {
 }
 form {
     left: 50%;
-    top: 20%;
+    top: 50%;
     display: table;
     align-items: center;
 }
